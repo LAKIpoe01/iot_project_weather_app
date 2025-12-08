@@ -6,14 +6,14 @@ import ssl
 from umqtt.simple import MQTTClient
 
 # ---------- MQTT CONFIG ----------
-MQTT_CLIENT_ID   = "LakiClient"                # any ID you like
-MQTT_BROKER      = "d3ce46cf136b4fd18e1293a2f21192f3.s1.eu.hivemq.cloud"  # e.g. "xxxxx.s1.eu.hivemq.cloud"
-MQTT_PORT        = 8883                    # 8883 for HiveMQ Cloud with TLS
-MQTT_USER        = "Laki-server"                     # MQTT Username
-MQTT_PASSWORD    = "Laki9999"                     # MQTT PASSWORD
-MQTT_TOPIC_TEMP  = b"Laki/temp"           # matches your Node-RED topic
-MQTT_TOPIC_PRESS = b"Laki/pressure"       # optional, Topic name for pressure
-MQTT_CONTROL     = b"Laki/control"       # Topic name for LED ON/OFF from Node-RED
+MQTT_CLIENT_ID   = "AnyNameWillDo"                # any ID you like 
+MQTT_BROKER      = "URL_OF_YOUR_BROKER"           # <---CHANGE ME
+MQTT_PORT        = 8883                           # 8883 for HiveMQ Cloud with TLS
+MQTT_USER        = "MQ_USER_NAMR"                  # MQTT Username <---CHANGE ME
+MQTT_PASSWORD    = "MQ_PASSWORD"                     # MQTT PASSWORD <---CHANGE ME
+MQTT_TOPIC_TEMP  = b"TOPIC_NAME"                   # matches your Node-RED topic <---CHANGE ME
+MQTT_TOPIC_PRESS = b"TOPIC_NAME"               # optional, Topic name for pressure <---CHANGE ME
+MQTT_CONTROL     = b"TOPIC_NAME"                # Topic name for LED ON/OFF from Node-RED <---CHANGE ME
 # ----------------------------------
 
 # Small helper to make sure we pass bytes to MQTT client
@@ -24,7 +24,7 @@ def to_bytes(s):
 wlan = network.WLAN(network.STA_IF)
 wlan.active(True)
 wlan.config(pm=0xa11140)  # Disable powersave mode (good for MQTT)
-wlan.connect('DNA-WIFI-D15A', 'FYG3c4B8') #wifiname, wifipassword
+wlan.connect('wifiname', 'wifipassword') #<---CHANGE ME
 
 max_wait = 10
 while max_wait > 0:
@@ -105,4 +105,5 @@ while True:
     client.check_msg()
 
     utime.sleep(30)
+
 
