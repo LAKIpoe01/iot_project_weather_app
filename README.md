@@ -88,3 +88,4 @@ Go to the menu (top right corner) > "Manage palette" > "Install" > "node-red-con
 
 ![alt text](images/image-11.png)
 
+## Step 5 (Mobile-app):
