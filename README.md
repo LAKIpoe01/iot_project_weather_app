@@ -11,8 +11,6 @@ A temperature that is too low will turn on the LED***
 Download thonny.
 https://micropython.org/download/RPI_PICO_W/
 
-![alt text](image.png)
-
 Download necessary packages into thonny. Tools -> Manage packages -> umqtt.robust and umqtt.simple
 
 ![alt text](image-1.png)
@@ -28,11 +26,7 @@ NOTE! MQTT_BROKER, PORT, USER and PASSWORD will get from HIVEMQ.
 # STEP 2 (HiveMQ):
 Login to HiveMQ or create an account.
 
-![alt text](image-4.png)
-
-Create a new cluster and select free
-
-![alt text](image-6.png)
+Create a new cluster and select free.
 
 Manage cluster and copy the URL and the port into your main.py
 
@@ -45,3 +39,4 @@ Go to access management in your service and add credentials.
 Then go to web client and start the cloud with your credentials.
 
 ![alt text](image-9.png)
+
