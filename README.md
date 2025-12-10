@@ -7,11 +7,11 @@ A temperature that is too low will turn on the LED***
 
 ## Getting Started 
 
-# Step 1 (thonny):
+# Step 1 (Thonny):
 Download thonny.
 https://micropython.org/download/RPI_PICO_W/
 
-Download necessary packages into thonny. Tools -> Manage packages -> umqtt.robust and umqtt.simple
+Download necessary packages into thonny. "Tools" > "Manage packages" > "umqtt.robust" and "umqtt.simple"
 
 ![alt text](image-1.png)
 
@@ -32,7 +32,7 @@ Manage cluster and copy the URL and the port into your main.py
 
 ![alt text](image.png)
 
-Go to access management in your service and add credentials.
+Go to access management in your service and add credentials. These credentials are added to the code.
 
 ![alt text](image-8.png)
 
@@ -47,4 +47,31 @@ You can try to connect to the wifi and MQTT broker. Subscribe on web client and 
 ![alt text](image-6.png)
 
 # Step 3 (InfluxDB):
+Install InfluxDB. https://docs.influxdata.com/influxdb/v2/install/?t=Windows+Powershell
 
+Unextract the files. Open CMD and move to the directory, where the files are located.
+
+Then run command ".\influxd.exe"
+
+![alt text](image-10.png)
+
+Login or create an account to InfluxDB Cloud 2.0.
+
+
+# Step 4 (Nodejs):
+Install nodejs. https://nodejs.org/en
+
+Open CMD as administrator and run the following commands.
+
+"npm install -g --unsafe-perm node-red"
+
+"node-red" < start node
+
+![alt text](image-7.png)
+
+Go to http://localhost:1880
+
+Install required packages: 
+Go to the menu (top right corner) > "Manage palette" > "Install" > "node-red-contrib-influxdb"
+
+Import the "flowsModule.json" from the menu.  
