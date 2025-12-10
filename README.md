@@ -5,7 +5,10 @@ points are then retrieved from the database and visualized in the mobile appli-
 cation. Additionally, the temperature reading is used as a control for an LED.
 A temperature that is too low will turn on the LED***
 
-# Getting Started 
+# Getting Started
+***Necessary components***
+- Raspberry Pi Pico W
+- BMP280 sensor
 
 ## Step 1 (Thonny):
 1. Download thonny.
@@ -13,13 +16,13 @@ https://micropython.org/download/RPI_PICO_W/
 
 2. Download necessary packages into thonny. "Tools" > "Manage packages" > "umqtt.robust" and "umqtt.simple"
 
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 
 3. Change the parameters of MQTT CONFIG and the Wifi connection.
 
-![alt text](image-3.png) 
+![alt text](images/image-3.png) 
 
 NOTE! MQTT_BROKER, PORT, USER and PASSWORD will get from HIVEMQ.
 
@@ -29,21 +32,21 @@ NOTE! MQTT_BROKER, PORT, USER and PASSWORD will get from HIVEMQ.
 2. Create a new cluster and select free.
 Manage cluster and copy the URL and the port into your main.py
 
-![alt text](image.png)
+![alt text](images/image.png)
 
 3. Go to access management in your service and add credentials. These credentials are added to the code.
 
-![alt text](image-8.png)
+![alt text](images/image-8.png)
 
 4. Then go to web client and start the cloud with your credentials.
 
-![alt text](image-9.png)
+![alt text](images/image-9.png)
 
 You can try to connect to the wifi and MQTT broker. Subscribe on web client and you can see the data.
 
-![alt text](image-4.png)
+![alt text](images/image-4.png)
 
-![alt text](image-6.png)
+![alt text](images/image-6.png)
 
 ## Step 3 (InfluxDB):
 1. Install InfluxDB. https://docs.influxdata.com/influxdb/v2/install/?t=Windows+Powershell
@@ -51,7 +54,7 @@ You can try to connect to the wifi and MQTT broker. Subscribe on web client and 
 2. Unextract the files. Open CMD and move to the directory, where the files are located.
 Then run command `.\influxd.exe`
 
-![alt text](image-10.png)
+![alt text](images/image-10.png)
 
 3. Login or create an account to InfluxDB Cloud 2.0.
 
@@ -66,7 +69,7 @@ Then run command `.\influxd.exe`
 
 `node-red` < start node
 
-![alt text](image-7.png)
+![alt text](images/image-7.png)
 
 Go to http://localhost:1880.
 
@@ -82,5 +85,5 @@ Go to the menu (top right corner) > "Manage palette" > "Install" > "node-red-con
 
 3. InfluxDB in (Data in) <-- InfluxDB credentials
 
-![alt text](image-11.png)
+![alt text](images/image-11.png)
 
