@@ -92,6 +92,43 @@ Go to the menu (top right corner) > "Manage palette" > "Install" > "node-red-con
 
 ![alt text](images/image-11.png)
 
+## Step 5 (Mobile App)
+
+The Android mobile application displays real-time sensor readings (temperature and pressure)
+and visualizes historical data retrieved directly from InfluxDB Cloud. The app communicates
+with InfluxDB using HTTPS Flux queries through Retrofit/OkHttp, with no backend server in between.
+
+### 📱 5.1 Install the Mobile App
+
+You can install the app in two ways:
+
+#### **Option A — Download APK (recommended)**
+1. Go to the GitHub Releases page:
+   👉 https://github.com/JuhoHummasti/iot_projekti/releases/latest
+2. Download **app-release.apk**
+3. Copy the file to your Android phone
+4. Open the APK and allow installation from “Unknown sources”
+5. Launch **PicoW Sensor Monitor**
+
+_No Android Studio needed._
+
+---
+
+#### **Option B — Build the App Manually (Developers)**
+
+1. Open the project folder in Android Studio:
+2. Build and run the app:
+### 🔑 5.2 Configure InfluxDB Credentials
+
+The app requires an API token and connection details for InfluxDB Cloud.
+
+Create (or edit) the `local.properties` file in the Android project root:
+
+INFLUX_TOKEN=your_influx_token_here
+INFLUX_ORG=your_org_id
+INFLUX_BUCKET=Oulu
+INFLUX_BASE_URL=https://us-east-1-1.aws.cloud2.influxdata.com/
+
 
 > ⚠️ This file is ignored by Git and must be created locally.
 
