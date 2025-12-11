@@ -61,6 +61,10 @@ Then run command `.\influxd.exe`
 
 4. Create a bucket and all access API token. Save the API token, we will need it later.
 
+Successfully published data can be seen in the "data explorer" 
+
+![alt text](images/image-5.png)
+
 ## Step 4 (Nodejs):
 1. Install nodejs. https://nodejs.org/en
 
