@@ -92,4 +92,43 @@ Go to the menu (top right corner) > "Manage palette" > "Install" > "node-red-con
 
 ![alt text](images/image-11.png)
 
-## Step 5 (Mobile-app):
+
+> ⚠️ This file is ignored by Git and must be created locally.
+
+---
+
+### 📊 5.3 Features of the Mobile App
+
+#### **Home Screen**
+- Displays the latest temperature and pressure values  
+- Shows timestamp and device ID  
+- Automatically refreshes periodically  
+
+#### **History Screen**
+- Supports 24h, Week, Month, and Year time ranges  
+- Navigate to previous / next periods  
+- Dual-axis chart:
+  - Left axis → Temperature
+  - Right axis → Pressure
+  - Bottom axis → Time  
+- Smooth Canvas-based graph rendering  
+
+#### **Backend Communication**
+- App talks **directly** to InfluxDB Cloud
+- Uses:
+  - Retrofit for HTTP queries  
+  - OkHttp for networking  
+  - Flux queries for retrieving time-series data  
+
+---
+
+### 📦 5.4 Libraries Used
+
+- Jetpack Compose (UI)
+- Material 3
+- Retrofit + Scalars Converter
+- OkHttp + Logging Interceptor
+- Kotlin Coroutines
+- AndroidX Lifecycle + ViewModel
+
+---
